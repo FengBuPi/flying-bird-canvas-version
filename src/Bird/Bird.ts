@@ -41,8 +41,8 @@ export default class Bird {
       0,
       this.birdWidth,
       this.birdHeight,
-      -this.birdWidth / 2,
-      -this.birdHeight / 2,
+      this.birdWidth / 2,
+      this.birdHeight / 2,
       this.birdWidth,
       this.birdHeight
     );
@@ -55,9 +55,8 @@ export default class Bird {
 
   // 初始化飞行的方法
   initFly(): void {
-    const that = this;
-    this.ctx.canvas.onclick = function () {
-      that.v0 = -0.3;
+    this.ctx.canvas.onclick = () => {
+      this.v0 = -0.3;
     };
   }
 }

@@ -28,7 +28,7 @@ export default class Pipe {
     this.ctx.rect(this.x, this.topY, this.imgWidth, this.imgHeight);
     this.ctx.rect(this.x, this.botY, this.imgWidth, this.imgHeight);
     this.x -= this.speed;
-    if (this.x <= -this.topImg.width) {
+    if (this.x <= this.topImg.width) {
       this.x += 18 * this.imgWidth;
     }
   }
